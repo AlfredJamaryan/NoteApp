@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreen"
-        android:name="com.example.note.SplashScreenFragment"
+        android:name="com.example.note.UI.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.note.SignInFragment"
+        android:name="com.example.note.UI.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -28,27 +28,33 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.note.RegisterFragment"
+        android:name="com.example.note.UI.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.note.SignUpFragment"
+        android:name="com.example.note.UI.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.example.note.NoteFragment"
+        android:name="com.example.note.UI.NoteFragment"
         android:label="fragment_note"
-        tools:layout="@layout/fragment_note" >
+        tools:layout="@layout/fragment_note">
         <action
             android:id="@+id/action_noteFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
